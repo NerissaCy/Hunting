@@ -17,3 +17,16 @@ void Dump(ListNode* head) {
     head = head->next;
   }
 }
+
+template<class T>
+void Dump(const vector<T>& vec) {
+  for (auto an_item : vec)
+    cout<<an_item<<" ";
+  cout<<endl;
+}
+
+template<class T>
+void Dump(const vector<vector<T> >& vevec) {
+  for (auto vec : vevec)
+    Dump(vec);
+}
