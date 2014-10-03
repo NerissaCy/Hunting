@@ -28,4 +28,13 @@ Search In Rotated Sorted Array (duplicates)
          (D.3) else l = m + 1;
      (E) else // right part increasing, 3 cases...
 
+Subsets: Given a set of distinct integers, return all possible subsets.
+  1. Wrong Idea: DFS, each time choose between:
+     (A) Do no select any integer.
+     (B) Select one integer from s[start..end], and update start.
+     Why wrong? Duplicates!
+     # # 3 = # 3 # = 3 # #
+  2. Correct Idea: DFS, each time choose between:
+     (A) Select current integer.
+     (B) Do not select current integer.
 

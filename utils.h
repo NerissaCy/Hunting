@@ -2,6 +2,7 @@
 #include <stack>
 #include <map>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 struct ListNode {
