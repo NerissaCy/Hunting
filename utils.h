@@ -1,6 +1,7 @@
 #include <vector>
 #include <stack>
 #include <map>
+#include <set>
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -17,6 +18,7 @@ void Dump(ListNode* head) {
     cout << head->val << " ";
     head = head->next;
   }
+  cout<<endl;
 }
 
 template<class T>

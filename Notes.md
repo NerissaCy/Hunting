@@ -38,3 +38,30 @@ Subsets: Given a set of distinct integers, return all possible subsets.
      (A) Select current integer.
      (B) Do not select current integer.
 
+Valid Binary Search Tree: Inorder Traversal Is Ordered
+  1. Easy to mess up details.
+     Func: bool util(TreeNode* root, int& prev)
+     (A) If (!root) return true;
+     (B) If left part is not BST, return false.
+     (C) Is root->val < prev? Also update prev.
+     (D) If right part is not BST, return false.
+     (E) Return true. 
+
+3Sum: Given an array S of n integers, find all unique triplets which contains
+different elements in S, such that a + b + c = 0.
+  1. Sort, first element iterate from S.begin.
+  2. Second element initialized as first+1, third element initialize as last.
+  3. while (second != third)
+     (A) if (sum < 0) second++;
+     (B) else if (sum > 0) third--;
+     (C) else [Important]
+         (i) if <first-val, second-val, third-val> already added, do nothing.
+             else add it to answer.
+         (ii) second++ until second->val changes
+        (iii) third-- until third->val changes
+
+
+Following Problem Should Always Been Revisited: (easy to mess up with details)
+1. pow(x, n)
+2. Insertion Sort List
+
