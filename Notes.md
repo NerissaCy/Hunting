@@ -60,8 +60,30 @@ different elements in S, such that a + b + c = 0.
          (ii) second++ until second->val changes
         (iii) third-- until third->val changes
 
+Container With Most Rain Water:
+  Related Problem:
+    1. Trapping Rain Water
+       For each slot, trapped water = min(max(A[0..i-1]), max(A[i+1..n-1])) -
+                                      A[i]
+    2. Largest Rectangle Histogram
+       Largest Rectangle covering i, with height A[i], the area is:
+          = (right-guard (right, farest to i, height >= A[i]) -
+            left-guard (left, farest to i, height >= A[i]) + 1) * A[i]
+       In reality, right-guard & left-guard cannot be directly obtained,
+       thus: left-guard* (left, nearest to i, height < A[i])
+            right-guard* (right, nearest to i, height < A[i])
+            left-guard = left-guard* + 1;
+           right-guard =right-guard* - 1;
+   But this one:
+     Water contained between [l, r] = min(A[l], A[r]) * (r-l+1)
+      l < r, l++,
+      l > r, r--,
+      l == r, l++ or r-- both work
+     Different from 1: in problem 1, only height matters.
+     Different from 2: in problem 2, only width matters.
+     But in this one: both height and width matters.
 
 Following Problem Should Always Been Revisited: (easy to mess up with details)
 1. pow(x, n)
 2. Insertion Sort List
-
+3. Reorder List
